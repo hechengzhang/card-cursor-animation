@@ -1,0 +1,90 @@
+.App {
+  width: 100vw;
+  height: 100vh;
+  background-color: #000;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+.center-container {
+  width: 800px;
+  height: 600px;
+  display: flex;
+  gap: 20px;
+}
+
+.container-left,
+.container-right {
+  display: flex;
+  gap: 20px;
+}
+
+.container-left {
+  width: 260px;
+  flex-direction: column;
+}
+
+.container-right {
+  flex: 1;
+  flex-wrap: wrap;
+}
+
+.card {
+  position: relative;
+  background-color: #1e1e1e;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all .3s ease-in-out;
+  overflow: hidden;
+  padding: 24px;
+}
+
+.card:hover {
+  background-color: #232323;
+}
+
+.card:hover .title {
+  opacity: 1;
+}
+.card:hover .desc {
+  opacity: 0.7;
+}
+
+.light-cursor {
+  position: absolute;
+  width: 200px;
+  height: 200px;
+  background-image: radial-gradient(#133aff, #1e1e1e);
+  border-radius: 100%;
+  left: -200px;
+  top: -200px;
+  filter: blur(70px);
+}
+
+.card *:not(.light-cursor) {
+  position: relative;
+  z-index: 2;
+}
+
+.title {
+  color: #FFF;
+  font-weight: 600;
+  opacity: 0.7;
+  transition: opacity 0.8s ease-in-out;
+  font-size: 20px;
+}
+
+.desc {
+  color: #FFF;
+  opacity: 0.5;
+  font-weight: 500;
+  transition: opacity 0.8s ease-in-out;
+  font-size: 16px;
+  margin-top: 20px
+}
